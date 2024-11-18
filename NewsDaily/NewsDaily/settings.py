@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'NewsDaily.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'NewsDailyDb',        # Имя вашей базы данных
+        'USER': 'NewsDailyUser',            # Имя пользователя
+        'PASSWORD': 'NewsDailyPassword',    # Пароль
+        'HOST': 'localhost',          # Обычно 'localhost' или IP-адрес сервера
+        'PORT': '5432',               # Порт PostgreSQL (по умолчанию 5432)
     }
 }
 
