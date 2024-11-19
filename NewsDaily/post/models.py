@@ -13,7 +13,7 @@ class Post(models.Model):
     title = models.CharField(max_length=60)
     content = models.TextField(max_length=1200)
     author = models.ForeignKey(Author, related_name='author', on_delete=models.CASCADE)
-    create_date = models.DateTimeField(auto_created=True)
+    create_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
